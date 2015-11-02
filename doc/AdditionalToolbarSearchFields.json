@@ -1,7 +1,8 @@
 {
     "name": "AdditionalToolbarSearchFields",
-    "version": "5.0.1",
+    "version": "5.0.2",
     "framework": [
+        "4.0.x",
         "5.0.x"
     ],
     "vendor": {
