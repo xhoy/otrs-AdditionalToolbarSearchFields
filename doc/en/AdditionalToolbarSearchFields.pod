@@ -1,19 +1,21 @@
 =head1 NAME
 
-FlexibleTicketModule
+AdditionalToolbarSearchFields
 
 =head1 DESCRIPTION
 
-If you need more dialogs for the ticket zoom, e.g. if you want to add new dialogs to handle visits at the
-customers' site, you can use this addon to define those dialogs.
+In stock OTRS you can enable a fulltext search in the toolbar. With this addon you can add an additional field to
+search for the customer number.
 
-All the dialogs are based on the AgentTicketPhoneOutbound, but you can define several things like
-article type, the fields shown etc. In the SysConfig you get two sample configs, but you can define 
-more dialogs in your own xml file.
+Additionally you can enable a form where the search is limited to the "open" ticket states.
 
 =head1 REPOSITORY AND BUGTRACKER
 
-The code repository and a bugtracker are available at L<http://github.com/reneeb/otrs-FlexibleTicketModule>.
+The code repository and a bugtracker are available at L<http://github.com/reneeb/otrs-AdditionalToolbarSearchFields>.
+
+=head1 ACKNOWLEDGEMENT
+
+This addon was sponsored by SIJN ICT Services (L<http://sijn.nl>).
 
 =head1 AUTHOR
 
