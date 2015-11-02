@@ -1,5 +1,5 @@
 {
-    "name": "FlexibleTicketModule",
+    "name": "AdditionalToolbarSearchFields",
     "version": "4.0.2",
     "framework": [
         "4.0.x"
@@ -10,7 +10,7 @@
     },
     "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007",
     "description" : {
-        "en": "Define your own dialogs for the ticket zoom",
-        "de": "Definiere eigene Dialoge für die Ticketansicht"
+        "en": "More search fields for the toolbar fulltext search",
+        "de": "Zusätzliche Felder für die Toolbar-Volltextsuche"
     }
 }
