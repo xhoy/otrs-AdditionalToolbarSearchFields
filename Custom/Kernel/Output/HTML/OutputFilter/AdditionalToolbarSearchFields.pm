@@ -49,7 +49,10 @@ sub Run {
     my $ShowCustomer = $ConfigObject->Get('AdditionalToolbarSearchFields::ShowCustomerNumberField');
 
     if ( $ShowCustomer ) {
-        my $Input = qq~<input id="Fulltext" type="text" name="CustomerID" value="" class="W50pc" title="$TitleText" placeholder="$TitleText"/>~;
+        my $Input = qq~
+            <input type="submit" style="position: absolute; height: 0px; width: 0px; border: none; padding: 0px" tabindex="-1" name="submit" value="submit" hidefocus="true" />
+            <input id="FulltextCustomerNr" type="text" name="CustomerID" value="" class="W50pc" title="$TitleText" placeholder="$TitleText"/>
+        ~;
 
         ${ $Param{Data} } =~ s{
             <form .*? name="SearchFulltext"> .*?
@@ -67,7 +70,8 @@ sub Run {
 
         my $Form = qq~
             <li class="Extended SearchFulltext" style="width: 400px !important">
-                <form action="$Baselink" method="post" name="SearchFulltext">
+                <form action="$Baselink" method="post" name="SearchFulltextStateSearch">
+                    <input type="submit" style="position: absolute; height: 0px; width: 0px; border: none; padding: 0px" tabindex="-1" name="submit" value="submit" hidefocus="true" />
                     <input type="hidden" name="Action" value="AgentTicketSearch"/>
                     <input type="hidden" name="Subaction" value="Search"/>
                     <input type="hidden" name="SearchTemplate" value="$Search"/>
@@ -81,8 +85,8 @@ sub Run {
                           <option selected="selected" value="8">pending auto close-</option>
                     </select>
 
-                    <input type="text" name="Fulltext" id="Fulltext" value="" title="$Label" placeholder="$LabelTextinput" />
-                    <input  id="Fulltext" type="text" name="CustomerID" size="" value="" class="W50pc" placeholder="$TitleText" title="$TitleText"/>
+                    <input type="text" name="Fulltext" id="FulltextStateSearch" value="" title="$Label" placeholder="$LabelTextinput" />
+                    <input  id="CustomerIDStateSearch" type="text" name="CustomerID" size="" value="" class="W50pc" placeholder="$TitleText" title="$TitleText"/>
                 </form>
             </li>
         ~;
