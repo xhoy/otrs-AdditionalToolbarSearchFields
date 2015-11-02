@@ -9,6 +9,11 @@ search for the customer number.
 
 Additionally you can enable a form where the search is limited to the "open" ticket states.
 
+=head1 USAGE
+
+To enable this add-on you must enable go to sysconfig Ticket -> Frontend::Agent::ToolBarModule and enable
+Frontend::ToolBarModule###12-Ticket::TicketSearchFulltext 
+
 =head1 REPOSITORY AND BUGTRACKER
 
 The code repository and a bugtracker are available at L<http://github.com/reneeb/otrs-AdditionalToolbarSearchFields>.
